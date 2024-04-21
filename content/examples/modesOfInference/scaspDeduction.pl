@@ -1,13 +1,15 @@
-:- reexport('background').
+:- use_module(library(scasp)).
+:- ensure_loaded('../../functions/createBackground.pl').
+:- reexport('backgroundv2').
 
 %% Deduction
 
-% Rule; all beans from this sack are white
-white(X) :- from(X,s1).
+run :-
+    background_deduction(B, Pos, Neg, Predicates, Goal),
+    create_background(B).
 
-% Case: These beans are from this sack
-from(b1,s1).
+?- run.
 
 % Result: These beans are white 
 % Query:
-% white(X). Results: X = b1
+% ?- white(X). % Results: X = b1

@@ -10,5 +10,5 @@ bean(X).
 #pred white(X) :: '@(X) is white'.
 white(Y).
 
-#pred from(X,Y) :: '@(X) is from @(Y)'.
-from(X,Y).
+#pred from(X,Z) :: '@(X) is from @(Z)'.
+from(X,Z).
