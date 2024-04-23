@@ -2,6 +2,7 @@
 :- ensure_loaded('../../First-Order-Learner-of-Default/fold.pl').
 :- ensure_loaded('../../functions/createBackground.pl').
 
+
 background_induction(B, Pos, Neg, Predicates, Goal) :-
     % Case: These beans are from this sack
     B = [
@@ -14,13 +15,11 @@ background_induction(B, Pos, Neg, Predicates, Goal) :-
     Neg = [],
     Predicates = [sack, bean, from_s1],
     Goal = white.
-    % fold.. Rule: all beans from this sack are white
-
-%% Induction
 
 run :-
     background_induction(B, Pos, Neg, Predicates, Goal),
     create_background(B),
+    % Rule: all beans from this sack are white
     fold(Goal, Pos, Neg, B, Predicates, D, AB, false),
     writeln(D),
     writeln(AB).

@@ -1,20 +1,6 @@
 :- use_module(library(scasp)).
 :- ensure_loaded('../../functions/createBackground.pl').
 
-
-%% Previous Background version
-% #pred sack(X) :: '@(X) is a sack'.
-% sack(s1).
-
-% #pred bean(X) :: '@(X) is a bean'.
-% bean(X).
-
-% #pred white(X) :: '@(X) is white'.
-% white(Y).
-
-% #pred from(X,Z) :: '@(X) is from @(Z)'.
-% from(X,Z).
-
 background_deduction(B, Pos, Neg, Predicates, Goal) :-
     B = [
         sack(s1),
@@ -33,8 +19,6 @@ background_deduction(B, Pos, Neg, Predicates, Goal) :-
     % Query:
     % white(X). Results: X = b1
     Goal = white.
-
-%% Deduction
 
 run :-
     background_deduction(B, Pos, Neg, Predicates, Goal),

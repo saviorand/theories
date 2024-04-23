@@ -12,8 +12,6 @@ background_abduction(B, Pos, Neg, Predicates) :-
     Predicates = [sack, bean, white].
     % Goal = from(b1,s1).
 
-%% Abduction
-
 run :-
     background_abduction(B, Pos, Neg, Predicates),
     create_background(B).
