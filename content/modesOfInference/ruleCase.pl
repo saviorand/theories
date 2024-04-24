@@ -1,6 +1,8 @@
 :- use_module(library(scasp)).
 :- ensure_loaded('../../functions/inference.pl').
 
+% Induction
+
 % ontology(Ontology, Predicates) :-
 %     Ontology = [
 %         sack(s1),
@@ -16,7 +18,10 @@
 %         ],
 %     Result = white. % These beans are white 
 
+% Induced "Rule": All beans from this sack are white
 % ?- ontology(Ontology, Predicates), theory([], Case, Result), inference(induction, Ontology, Predicates, [], Case, Result).
+
+% Deduction
 
 % ontology(Ontology, Predicates) :-
 %     Ontology = [
@@ -39,6 +44,7 @@
 
 % ?- ontology(Ontology, []), theory(Rule, Case, Result), inference(deduction, Ontology, [], Rule, Case, Result).
 
+% Abduction
 
 ontology(Ontology, Predicates) :-
     Ontology = [].
@@ -53,5 +59,6 @@ theory(Rule, Case, Result) :-
 % Defined on the top level
 #abducible from(X,Z).
 
-?- ontology(Ontology, []), theory(Rule, Case, Result), inference(abduction, Ontology, [], Rule, Case, Result).
+% Abduced "Case": These beans are from this sack
+?- ontology(Ontology, []), theory(Rule, Case, Result), inference(abduction, Ontology, [], Rule, Case, Result). 
 

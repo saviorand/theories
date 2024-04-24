@@ -1,0 +1,24 @@
+{
+	"nodes":[
+		{"id":"6ef09851dda991d6","type":"text","text":"Deduction","x":-370,"y":25,"width":250,"height":60,"color":"3"},
+		{"id":"bd56794a25567553","type":"text","text":"Induction","x":-80,"y":25,"width":250,"height":60,"color":"4"},
+		{"id":"24065403c9262a34","type":"text","text":"Abduction","x":200,"y":25,"width":250,"height":60,"color":"#2c4df2"},
+		{"id":"330f876f22fa8460","type":"text","text":"Rule","x":-370,"y":120,"width":250,"height":60},
+		{"id":"02fc141fdd57d970","type":"text","text":"Case","x":-307,"y":220,"width":125,"height":60},
+		{"id":"54944f0a54dce72b","type":"text","text":"Result","x":-307,"y":320,"width":125,"height":60},
+		{"id":"5ffba39d4db3748c","type":"text","text":"Case","x":-17,"y":120,"width":125,"height":60},
+		{"id":"75fa13740cbf9f8b","type":"text","text":"Result","x":-17,"y":220,"width":125,"height":60},
+		{"id":"76e62222f03adea0","type":"text","text":"Rule","x":-80,"y":320,"width":250,"height":60},
+		{"id":"fee439c0335a145b","type":"text","text":"Rule","x":201,"y":320,"width":250,"height":60},
+		{"id":"43b0e55ec4fae153","type":"text","text":"Result","x":264,"y":220,"width":125,"height":60},
+		{"id":"82e7c68666459c48","type":"text","text":"Case","x":264,"y":120,"width":125,"height":60}
+	],
+	"edges":[
+		{"id":"4c1bf104f21df230","fromNode":"330f876f22fa8460","fromSide":"bottom","toNode":"02fc141fdd57d970","toSide":"top","color":"5"},
+		{"id":"ba7ad5a65986ac95","fromNode":"02fc141fdd57d970","fromSide":"bottom","toNode":"54944f0a54dce72b","toSide":"top","color":"5"},
+		{"id":"d3ed2be1fbb5759a","fromNode":"5ffba39d4db3748c","fromSide":"bottom","toNode":"75fa13740cbf9f8b","toSide":"top","color":"3"},
+		{"id":"46a41316c643fd33","fromNode":"75fa13740cbf9f8b","fromSide":"bottom","toNode":"76e62222f03adea0","toSide":"top","color":"2"},
+		{"id":"7fc447aa11757db5","fromNode":"43b0e55ec4fae153","fromSide":"top","toNode":"82e7c68666459c48","toSide":"bottom","color":"2"},
+		{"id":"749e63e045b108a5","fromNode":"fee439c0335a145b","fromSide":"top","toNode":"43b0e55ec4fae153","toSide":"bottom","color":"3"}
+	]
+}
