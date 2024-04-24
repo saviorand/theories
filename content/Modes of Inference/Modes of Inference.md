@@ -1,3 +1,15 @@
+%% Begin Waypoint %%
+- **Abduction**
+
+- [[Beans Example]]
+- **Deduction**
+
+- **Induction**
+
+- **[[[Beans Example]]n]]**
+
+%% End Waypoint %%
+
 [From stackoverflow](https://math.stackexchange.com/posts/2126985/timeline):
 > [This Youtube video](https://www.youtube.com/watch?v=-nn3XMoPC7s) distinguished and explained most clearly for me:
 > 
