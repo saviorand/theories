@@ -1,5 +1,5 @@
 :- use_module(library(scasp)).
-:- ensure_loaded('../../functions/inference.pl').
+:- ensure_loaded('../../../functions/inference.pl').
 
 % Induction
 

@@ -6,7 +6,7 @@
 
 - **Induction**
 
-- **[[[Beans Example]]n]]**
+- **[[Retroduction]]**
 
 %% End Waypoint %%
 

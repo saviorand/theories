@@ -1,4 +1,4 @@
-- [[package/main.pl|main]]
+- [[Prolog/package/main.pl|main]]
 
 %% Begin Waypoint %%
 - **[[folder]]**
