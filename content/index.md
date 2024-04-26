@@ -3,7 +3,7 @@ title: What up
 ---
 Social science yo
 
-- [[Philosophy and Knowledge]]
+- [[Knowledge]]
 - 
 
 For ontology files put the following at the top of the file:
