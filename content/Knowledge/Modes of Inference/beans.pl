@@ -1,64 +1,36 @@
 :- use_module(library(scasp)).
-:- ensure_loaded('../../../functions/inference.pl').
+:- ensure_loaded('../../functions/inference.pl').
 
 % Induction
 
-% ontology(Ontology, Predicates) :-
-%     Ontology = [
-%         sack(s1),
-%         bean(b1),
-%         white(Y)
-%     ],
-%     Predicates = [sack, bean, from_s1].
-
-% theory(Rule, Case, Result) :-
-%     Case = [
-%         from_s1(b1), % These beans are from this sack
-%         positive(b1)
-%         ],
-%     Result = white. % These beans are white 
-
-% Induced "Rule": All beans from this sack are white
-% ?- ontology(Ontology, Predicates), theory([], Case, Result), inference(induction, Ontology, Predicates, [], Case, Result).
+% ?- inference(induction, [
+%     sack(s1),
+%     bean(b1),
+%     white(Y),
+%     from_s1(b1), % Case: These beans are from this sack
+%     positive(b1)
+% ], white). % Result: These beans are white 
+% % Induced "Rule": All beans from this sack are white
 
 % Deduction
 
-% ontology(Ontology, Predicates) :-
-%     Ontology = [
-%         sack(s1),
-%         bean(X),
-%         white(Y),
-%         from(X,Z)
-%     ].
-
-% theory(Rule, Case, Result) :-
-%     Rule = [
-%         % All beans from this sack are white
-%         bean(B),
-%         white(B) :- from(B,s1)
-%         ],
-%     Case = [
-%         from(b1,s1) % These beans are from this sack
-%         ],
-%     Result = white(X). % These beans are white 
-
-% ?- ontology(Ontology, []), theory(Rule, Case, Result), inference(deduction, Ontology, [], Rule, Case, Result).
+% ?- inference(deduction, [
+%     sack(s1),
+%     bean(X),
+%     white(Y),
+%     from(X,Z),
+%     bean(B),
+%     white(B) :- from(B,s1), % Rule: All beans from this sack are white
+%     from(b1,s1) % Case: These beans are from this sack
+% ], white(X)).
+% % Deduced Result: These beans are white
 
 % Abduction
 
-ontology(Ontology, Predicates) :-
-    Ontology = [].
-
-theory(Rule, Case, Result) :-
-    Rule = [
-        white(X) :- from(X,s1) % All beans from this sack are white
-        ],
-    Case = [],
-    Result = white(b1). % These beans are white 
-
-% Defined on the top level
+% Abducibles defined on the top level
 #abducible from(X,Z).
 
+?- inference(abduction, [
+    white(X) :- from(X,s1) % Rule: All beans from this sack are white
+    ], white(b1)). % These beans are white 
 % Abduced "Case": These beans are from this sack
-?- ontology(Ontology, []), theory(Rule, Case, Result), inference(abduction, Ontology, [], Rule, Case, Result). 
-

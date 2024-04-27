@@ -1,9 +1,0 @@
-{ "comment": "Examples ...; an empty file list can make sure they do NOT appear in the Examples menu",
-    "menu":[ {"group":"le","rank":30000} ],
-    "files":[
-      { "file":"LogicalEnglish.swinb",
-        "title":"Logical English notebook",
-        "group":"le"
-      }
-      ]
-    }
