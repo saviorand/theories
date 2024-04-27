@@ -1,0 +1,3 @@
+[submodule "content/LogicalEnglish"]
+	path = content/LogicalEnglish
+	url = https://github.com/LogicalContracts/LogicalEnglish.git

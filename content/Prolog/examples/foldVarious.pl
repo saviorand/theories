@@ -1,4 +1,4 @@
-:- ensure_loaded('../First-Order-Learner-of-Default/fold.pl').
+:- ensure_loaded('../packs/First-Order-Learner-of-Default/fold.pl').
 
 create_background([]).
 create_background([H|T]):-
