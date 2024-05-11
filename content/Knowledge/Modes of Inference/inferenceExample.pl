@@ -1,5 +1,6 @@
 :- use_module(library(scasp)).
 :- ensure_loaded('../../functions/inference.pl').
+:- style_check(-singleton).
 
 % Deduction
 
