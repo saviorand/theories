@@ -1,5 +1,37 @@
 %% Begin Waypoint %%
-- **[[Knowledge]]**
-- **[[Social Ecological Systems]]**
+- **Concepts**
+	- **Abstract**
+	- **Events**
+	- **Physical**
+- **Individuals**
+	- [[Branko Milanovic]]
+	- [[Friedrich Engels]]
+	- [[Karl Marx]]
+	- [[Kohei Saito]]
+	- [[Marina Fischer-Kowalski]]
+	- [[Rosa Luxembourg]]
+- **[[Meta]]**
+- **Objectives**
+	- **Emancipation**
+	- **Peace**
+	- **Provisioning**
+- **Theories**
+- **Thought Communities**
+	- **Degrowth**
+	- **Environmentalists**
+	- **Linguists**
+		- **Etymologists**
+	- **Marxists**
+	- **Mathematicians**
+	- **Neoliberal**
+	- **Philosophy and Religion**
+		- **Buddhist**
+		- **Regional**
+			- **African Philosophy**
+			- **American Philosophy**
+			- **Asian Philosophy**
+			- **Middle Eastern Philosophy**
+			- **Western Philosophy**
+				- **Greek**
 
 %% End Waypoint %%
