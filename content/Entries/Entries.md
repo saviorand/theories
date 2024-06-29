@@ -15,6 +15,7 @@
 	- **Emancipation**
 	- **Peace**
 	- **Provisioning**
+- **Questions**
 - **Theories**
 - **Thought Communities**
 	- **Degrowth**
@@ -33,5 +34,6 @@
 			- **Middle Eastern Philosophy**
 			- **Western Philosophy**
 				- **Greek**
+- **Works**
 
 %% End Waypoint %%
