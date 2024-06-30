@@ -1,4 +1,5 @@
 %% Begin Waypoint %%
+- **[[Critique]]**
 - **[[Development]]**
 - **[[Institutional types]]**
 - **[[Law]]**

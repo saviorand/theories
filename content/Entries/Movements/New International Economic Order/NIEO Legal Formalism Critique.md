@@ -1,1 +1,1 @@
-A critique addressing (targets::[[Legal formalism]])
+A (category::[[Critique]]) addressing (targets::[[Legal formalism]])
