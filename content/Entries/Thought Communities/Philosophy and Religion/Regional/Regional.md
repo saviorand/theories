@@ -1,14 +1,9 @@
 %% Begin Waypoint %%
-- **[[Concepts]]**
-- **[[Individuals]]**
-- **[[Meta]]**
-- **[[Movements]]**
-- **[[Objectives]]**
-- **[[Organizations]]**
-- **[[Questions]]**
-- **[[Theories]]**
-- **[[Thought Communities]]**
-- **[[Works]]**
+- **[[African Philosophy]]**
+- **[[American Philosophy]]**
+- **[[Asian Philosophy]]**
+- **[[Middle Eastern Philosophy]]**
+- **[[Western Philosophy]]**
 
 %% End Waypoint %%
 

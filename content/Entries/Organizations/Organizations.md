@@ -1,14 +1,6 @@
 %% Begin Waypoint %%
-- **[[Concepts]]**
-- **[[Individuals]]**
-- **[[Meta]]**
-- **[[Movements]]**
-- **[[Objectives]]**
-- **[[Organizations]]**
-- **[[Questions]]**
-- **[[Theories]]**
-- **[[Thought Communities]]**
-- **[[Works]]**
+- **[[Intergovernmental bodies]]**
+- **[[Trans-National Corporations]]**
 
 %% End Waypoint %%
 

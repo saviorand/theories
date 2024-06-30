@@ -1,14 +1,11 @@
 %% Begin Waypoint %%
-- **[[Concepts]]**
-- **[[Individuals]]**
-- **[[Meta]]**
-- **[[Movements]]**
-- **[[Objectives]]**
-- **[[Organizations]]**
-- **[[Questions]]**
-- **[[Theories]]**
-- **[[Thought Communities]]**
-- **[[Works]]**
+- **[[Degrowth]]**
+- **[[Environmentalists]]**
+- **[[Linguists]]**
+- **[[Marxists]]**
+- **[[Mathematicians]]**
+- **[[Neoliberal]]**
+- **[[Philosophy and Religion]]**
 
 %% End Waypoint %%
 

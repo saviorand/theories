@@ -1,14 +1,10 @@
 %% Begin Waypoint %%
-- **[[Concepts]]**
-- **[[Individuals]]**
-- **[[Meta]]**
-- **[[Movements]]**
-- **[[Objectives]]**
-- **[[Organizations]]**
-- **[[Questions]]**
-- **[[Theories]]**
-- **[[Thought Communities]]**
-- **[[Works]]**
+- [[Branko Milanovic]]
+- [[Friedrich Engels]]
+- [[Karl Marx]]
+- [[Kohei Saito]]
+- [[Marina Fischer-Kowalski]]
+- [[Rosa Luxembourg]]
 
 %% End Waypoint %%
 

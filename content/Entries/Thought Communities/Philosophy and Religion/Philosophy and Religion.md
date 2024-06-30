@@ -1,14 +1,6 @@
 %% Begin Waypoint %%
-- **[[Concepts]]**
-- **[[Individuals]]**
-- **[[Meta]]**
-- **[[Movements]]**
-- **[[Objectives]]**
-- **[[Organizations]]**
-- **[[Questions]]**
-- **[[Theories]]**
-- **[[Thought Communities]]**
-- **[[Works]]**
+- **[[Buddhist]]**
+- **[[Regional]]**
 
 %% End Waypoint %%
 

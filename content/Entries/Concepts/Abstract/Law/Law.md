@@ -1,14 +1,7 @@
 %% Begin Waypoint %%
-- **[[Concepts]]**
-- **[[Individuals]]**
-- **[[Meta]]**
-- **[[Movements]]**
-- **[[Objectives]]**
-- **[[Organizations]]**
-- **[[Questions]]**
-- **[[Theories]]**
-- **[[Thought Communities]]**
-- **[[Works]]**
+- **[[Bindingness of Law]]**
+- **[[International Law]]**
+- **[[Legal formalism]]**
 
 %% End Waypoint %%
 
