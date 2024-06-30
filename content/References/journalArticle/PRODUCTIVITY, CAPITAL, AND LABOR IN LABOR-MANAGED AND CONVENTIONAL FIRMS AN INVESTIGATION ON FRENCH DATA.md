@@ -1,0 +1,5 @@
+[🇿](zotero://select/groups/4587578/items/9QKC7TJW)
+
+[[Entries/Individuals/FATHI FAKHFAKH]] [[Entries/Individuals/VIRGINIE PÉROTIN]] [[Entries/Individuals/MÓNICA GAGO]] 
+# PRODUCTIVITY, CAPITAL, AND LABOR IN LABOR-MANAGED AND CONVENTIONAL FIRMS: AN INVESTIGATION ON FRENCH DATA (2012)
+

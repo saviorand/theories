@@ -1,0 +1,5 @@
+[🇿](zotero://select/library/items/88XBP2UU)
+
+[[Entries/Individuals/Konstantin Stadler]] [[Entries/Individuals/Richard Wood]] [[Entries/Individuals/Tatyana Bulavskaya]] [[Entries/Individuals/Carl-Johan Södersten]] [[Entries/Individuals/Moana Simas]] [[Entries/Individuals/Sarah Schmidt]] [[Entries/Individuals/Arkaitz Usubiaga]] [[Entries/Individuals/José Acosta-Fernández]] [[Entries/Individuals/Jeroen Kuenen]] [[Entries/Individuals/Martin Bruckner]] [[Entries/Individuals/Stefan Giljum]] [[Entries/Individuals/Stephan Lutter]] [[Entries/Individuals/Stefano Merciai]] [[Entries/Individuals/Jannick H. Schmidt]] [[Entries/Individuals/Michaela C. Theurl]] [[Entries/Individuals/Christoph Plutzar]] [[Entries/Individuals/Thomas Kastner]] [[Entries/Individuals/Nina Eisenmenger]] [[Entries/Individuals/Karl-Heinz Erb]] [[Entries/Individuals/Arjan de Koning]] [[Entries/Individuals/Arnold Tukker]] 
+# EXIOBASE 3: Developing a Time Series of Detailed Environmentally Extended Multi-Regional Input-Output Tables (2018)
+

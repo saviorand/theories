@@ -1,92 +1,34 @@
-%% Begin Waypoint %%
+In (Сites::[[The New International Economic Order A Reintroduction]] ):
 
+ >Focusing on different dimensions of the NIEO, our authors variously suggest that the NIEO was:
+> - a bid to empower the United Nations General Assembly as the legislative body for making binding international law
+> -   a critique of legal formalism
+> 	-> [creates::[[NIEO Legal Formalism Critique]]] (that targets legal formalism)
+> -   the genealogical starting point for “the right to development”
+> 	-> [creates::[[Right to development]]]
+> -  an effort to create a global regulatory framework for transnational corporations
+> 	-> [creates::[[NIEO Regulatory Framework]]] (that regulates transnational corporations)
+> -  an extension of the principle of sovereignty from the political to the economic realm
+> 	-> [contributesTo::[[Economic Sovereignty]]]
+> 	-> [uses::[[Political Sovereignty]]]
+> -   an incrementalist approach to reforming global economic and political power arrangements
+> -   an endeavor to redress historical grievances of newly independent states, thereby “completing” decolonization
+> -   a call for global redistribution—including financial, resource, and technology transfer—from rich to poor countries
+> -  an attempt to universalize and globalize the principles of “embedded liberalism” 
+> -   the high noon of “Third Worldism” and its vision of solidarity among the poorer nations
+> -  a radical challenge to the historic hegemony of the North Atlantic industrial core
+> -  a realistic program for global socialism
+> -   a utopian political project, global and totalizing in its ambitions
+> -  an alternative model for transnational economic integration—that is, of globalization
+> -  a key catalyst (via backlash) for the formulation of the neoliberal paradigm in favor of limiting state power and augmenting private power
+
+
+%% Begin Waypoint %%
+- [[NIEO Legal Formalism Critique]]
+- [[NIEO Regulatory Framework]]
 
 %% End Waypoint %%
 
 ```dataviewjs
-function toPrologAtom(str) {
-    return str.replace(/ /g, '_').toLowerCase(); // Replace spaces with underscores for Prolog atoms
-}
-
-const currentFolder = dv.current().file.folder;
-const pages = dv.pages().filter(p => p.file && p.file.folder.startsWith(currentFolder));
-
-let prologStatements = '';
-
-const fileMap = {};
-const fileMapAll = {};
-let triples = [];
-
-// Populate the fileMap for current folder and fileMapAll for the whole Vault
-pages.forEach(page => {
-    if (page.file && page.file.path) {
-        const path = page.file.path;
-        const fileName = toPrologAtom(page.file.name);
-        fileMap[path] = fileName;
-    }
-});
-dv.pages().forEach(page => {
-    if (page.file && page.file.path) {
-        const path = page.file.path;
-        const fileName = toPrologAtom(page.file.name);
-        fileMapAll[path] = fileName;
-    }
-});
-
-// Generate the triples
-pages.forEach(page => {
-    if (!page.file || !page.file.path) return;
-    const path = page.file.path;
-    const fileName = toPrologAtom(page.file.name);
-    const folderName = toPrologAtom(page.file.folder.split('/').pop());
-    const outgoingLinks = page.file.outlinks ? [...new Set(page.file.outlinks.values.map(l => l.path))] : [];
-    const processedLinks = {};
-
-    const links = Object.entries(page).filter(([key, val]) => val && val.path != null).map(([key, val]) => {
-        const item = { from: fileName, to: fileMapAll[val.path], rel: toPrologAtom(key) };
-        processedLinks[val.path] = 1;
-        return item;
-    }).filter(item => item.from !== item.to); // Filter out self-referential links
-
-    triples = triples.concat(links);
-    const unnamedLinks = outgoingLinks.filter(l => !processedLinks[l]).map(l => ({ from: fileName, to: fileMapAll[l], rel: 'linked' }));
-    triples = triples.concat(unnamedLinks);
-});
-
-// Remove duplicate triples
-const uniqueTriples = Array.from(new Set(triples.map(JSON.stringify))).map(JSON.parse);
-
-// Generate atoms for each node
-const nodes = Object.values(fileMap).map(v => `${v}.`).join('\n');
-prologStatements += nodes + '\n\n';
-
-// Separate and sort Prolog statements for each edge
-let parentRelations = [];
-let otherRelations = [];
-
-uniqueTriples.forEach(t => {
-    const fromPage = pages.find(page => fileMap[page.file.path] === t.from);
-    const toPage = dv.pages().find(page => fileMapAll[page.file.path] === t.to);
-
-    // Check if 'toPage' is in the same folder as 'fromPage' OR if 'toPage' is in a subfolder of 'fromPage'
-    if (toPage && (
-        toPage.file.folder === fromPage.file.folder || 
-        toPage.file.folder.startsWith(fromPage.file.folder + '/')
-    )) {
-        parentRelations.push(`parent(${t.from}, ${t.to}).`);
-    } else {
-        otherRelations.push(`${t.rel}(${t.from}, ${t.to}).`);
-    }
-});
-
-// Sort otherRelations alphabetically
-otherRelations.sort();
-
-// Concatenate Prolog statements: otherRelations and parentRelations 
-prologStatements += otherRelations.join('\n') + '\n\n';
-prologStatements += parentRelations.join('\n') + '\n\n';
-
-// Output Prolog statements
-dv.header(2, currentFolder);
-dv.span(prologStatements, 'prolog');
+await dv.view("prolog");
 ```
