@@ -1,5 +1,5 @@
 %% Begin Waypoint %%
-
+- [[Document]]
 
 %% End Waypoint %%
 

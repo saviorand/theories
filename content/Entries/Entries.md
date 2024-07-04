@@ -1,5 +1,6 @@
 %% Begin Waypoint %%
 - **[[Concepts]]**
+- **[[Ideologies]]**
 - **[[Individuals]]**
 - **[[Meta]]**
 - **[[Movements]]**

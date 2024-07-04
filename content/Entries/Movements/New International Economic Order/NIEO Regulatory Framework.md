@@ -1,1 +1,7 @@
-The (category::[[Regulatory Framework]]) created within NIEO that [targets::[[Trans-National Corporations]]] 
+[category::[[Regulatory Framework]]] 
+
+[targets::[[Trans-National Corporations]]] 
+[targets::[[UN General Assembly]]]  
+
+[contributes::[[Bindingness of Law]]]  
+[targets::[[International Law]]]

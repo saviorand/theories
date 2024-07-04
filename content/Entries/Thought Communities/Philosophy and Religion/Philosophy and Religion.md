@@ -1,6 +1,6 @@
 %% Begin Waypoint %%
 - **[[Buddhist]]**
-- **[[Regional]]**
+- **[[Entries/Thought Communities/Philosophy and Religion/Regional/Regional]]**
 
 %% End Waypoint %%
 

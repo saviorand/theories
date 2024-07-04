@@ -1,5 +1,5 @@
 %% Begin Waypoint %%
-
+- [[Prebish-Singer Hypothesis]]
 
 %% End Waypoint %%
 

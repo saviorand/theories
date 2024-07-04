@@ -1,5 +1,11 @@
 %% Begin Waypoint %%
 - **[[Abstract]]**
+- **Activities**
+	- **[[Critique]]**
+	- **[[Modelling]]**
+	- **[[Recommendation]]**
+- **Artifacts**
+	- [[NIEO Declaration]]
 - **[[Events]]**
 - **[[Physical]]**
 

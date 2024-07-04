@@ -1,5 +1,7 @@
 %% Begin Waypoint %%
-
+- **[[Cold War]]**
+- **[[Decolonization]]**
+- **[[North Atlantic hegemony]]**
 
 %% End Waypoint %%
 
