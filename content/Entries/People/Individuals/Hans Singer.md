@@ -1,0 +1,1 @@
+[author:: [[Prebish-Singer Hypothesis]]]

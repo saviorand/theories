@@ -1,5 +1,6 @@
 %% Begin Waypoint %%
 - **[[Diminishing Terms of Trade]]**
+- **[[Unequal Exchange]]**
 
 %% End Waypoint %%
 

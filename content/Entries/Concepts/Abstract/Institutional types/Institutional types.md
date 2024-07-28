@@ -1,4 +1,5 @@
 %% Begin Waypoint %%
+- **[[Cartel]]**
 - **[[Corporation]]**
 - **[[Government]]**
 - **[[Intergovernmental bodies]]**

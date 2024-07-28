@@ -1,14 +1,9 @@
 %% Begin Waypoint %%
 - **[[Concepts]]**
-- **[[Ideologies]]**
-- **[[Individuals]]**
-- **[[Meta]]**
-- **[[Movements]]**
-- **[[Objectives]]**
-- **[[Organizations]]**
+- **[[Frameworks]]**
+- **[[Goals]]**
+- **[[People]]**
 - **[[Questions]]**
-- **[[Theories]]**
-- **[[Thought Communities]]**
 
 %% End Waypoint %%
 

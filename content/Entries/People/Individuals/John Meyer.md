@@ -1,0 +1,1 @@
+[author::[[World Polity Theory]]] 
