@@ -1,26 +1,7 @@
+import sys
 import os
-import re
+from utils import parse_prolog_file
 
-def parse_prolog_file(file_path):
-    with open(file_path, 'r') as file:
-        content = file.read()
-
-    arity_1_predicates = {}
-    arity_2_predicates = []
-    
-    # Parse arity 1 predicates
-    for match in re.finditer(r'(\w+)\((\w+)\)\.', content):
-        predicate, parameter = match.groups()
-        if predicate not in arity_1_predicates:
-            arity_1_predicates[predicate] = set()
-        arity_1_predicates[predicate].add(parameter)
-
-    # Parse arity 2 predicates
-    for match in re.finditer(r'(\w+)\((\w+),\s*(\w+)\)\.', content):
-        predicate, param1, param2 = match.groups()
-        arity_2_predicates.append((predicate, param1, param2))
-
-    return arity_1_predicates, arity_2_predicates
 def create_folders_and_files(arity_1_predicates, arity_2_predicates, output_dir):
     os.makedirs(output_dir, exist_ok=True)
 
@@ -58,9 +39,13 @@ def create_folders_and_files(arity_1_predicates, arity_2_predicates, output_dir)
     print("Folders and files created successfully!")
 
 def main():
-    input_file = "./test.pl"  # Change this to your Prolog file name
-    output_dir = "output"    # Change this to your desired output directory
-
+    if len(sys.argv) < 3:
+        print("Usage: python prolog_to_folder.py input_file output_dir")
+        sys.exit(1)
+    
+    input_file = sys.argv[1]
+    output_dir = sys.argv[2]
+    
     arity_1_predicates, arity_2_predicates = parse_prolog_file(input_file)
     create_folders_and_files(arity_1_predicates, arity_2_predicates, output_dir)
 
