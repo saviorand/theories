@@ -3,10 +3,14 @@ import re
 from textwrap import wrap
 from openai import OpenAI
 from dotenv import load_dotenv
+import anthropic
 
 load_dotenv()
 
-client = OpenAI(
+claude_client = anthropic.Anthropic(
+    api_key=os.getenv("ANTHROPIC_API_KEY"),
+)
+gpt_client = OpenAI(
     api_key=os.getenv("OPENAI_API_KEY"),
 )
 
@@ -20,7 +24,7 @@ def file_to_chunks(input_file, chunk_size):
 def call_gpt_api(chunk, prompt):
     """Call the GPT API with the given chunk and prompt."""
     try:
-        response = client.chat.completions.create(
+        response = gpt_client.chat.completions.create(
         messages=[
         {
             "role": "system",
@@ -37,6 +41,30 @@ def call_gpt_api(chunk, prompt):
     except Exception as e:
         return f"Error: {str(e)}"
 
+def call_claude_api(chunk, prompt):
+    try:
+        message = claude_client.messages.create(
+            system=prompt,
+            model="claude-3-5-sonnet-20240620",
+            max_tokens=len(chunk),
+            temperature=0,
+            messages=[
+                {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": chunk
+                    }
+                ]
+                }
+            ]
+        )
+        return message.content[0].text
+    except Exception as e:
+        return f"Error: {str(e)}"
+
+
 def relation_correctness_check(text, prolog_code, prompt):
     correctness_check_prompt = f'''{prompt}
 
@@ -45,7 +73,8 @@ def relation_correctness_check(text, prolog_code, prompt):
 
     Original Text:'''
 
-    return call_gpt_api(text, correctness_check_prompt)
+    # return call_gpt_api(text, correctness_check_prompt)
+    return call_claude_api(text, correctness_check_prompt)
 
 def text_to_relations(chunks, output_file, prompt, correctness_check_prompt):
     """Extract relations from a list of chunks and save to output file."""
@@ -53,10 +82,11 @@ def text_to_relations(chunks, output_file, prompt, correctness_check_prompt):
     with open(output_file, 'w') as f:
         for i, chunk in enumerate(chunks):
             print(f"Processing relations chunk {i+1}/{len(chunks)}")
-            preliminary_result = call_gpt_api(chunk, prompt)
-            result = relation_correctness_check(chunk, preliminary_result, correctness_check_prompt)
-            f.write(f"% Chunk {i+1}\n{result}\n\n")
-            complete_output += result + "\n"
+            # preliminary_result = call_gpt_api(chunk, prompt)
+            preliminary_result = call_claude_api(chunk, prompt)
+            # result = relation_correctness_check(chunk, preliminary_result, correctness_check_prompt)
+            f.write(f"% Chunk {i+1}\n{preliminary_result}\n\n")
+            complete_output += preliminary_result + "\n"
     
     return complete_output
 
