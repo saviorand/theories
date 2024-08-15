@@ -1,5 +1,5 @@
 %% Begin Waypoint %%
-- **[[Concepts]]**
+- **[[Graph General/Concepts/Concepts]]**
 - **[[Frameworks]]**
 - **[[Goals]]**
 - **[[People]]**
